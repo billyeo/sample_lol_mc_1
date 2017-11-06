@@ -76,7 +76,8 @@ function printStuff(name){
                 matches.forEach(function(match, i){
                     if(i<5){
                     var val = match.gameId;
-                     list.append($('<li>').text(`Match${i+1}:`).append($('<a>').attr('href', 'matchLookUp(val)').text(`${match.gameId}`)));
+			createButton(function(){matchLookUp(match.gameId);}, match.gameId);
+                     //list.append($('<li>').text(`Match${i+1}:`).append($('<a>').attr('href', 'matchLookUp(val)').text(`${match.gameId}`)));
                      //list.on('click', 'href', matchLookUp(val));
                      //list.append($('<li>').text(`Match${i+1}:`).append($('<a>').on('click','matchLookUp(val)').text(`${match.gameId}`)));
                      //console.log(match.gameId);
